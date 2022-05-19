@@ -3,3 +3,11 @@ body {
     color: #FFFFFF;
     font-family: "Catamaran";
 }
+
+.secondback {
+    background-color: #2E3036;
+}
+
+input {
+    background-color: #212325;
+}
