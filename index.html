@@ -8,6 +8,25 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran">
         <meta name="keywords" content="discord, cool, among us baddie, sheeshy baka, sussy"/>
         <meta name="description" content="a place where you can hang out and talk to friends about whether or not traps are homo or not"/>
+        <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:64758', { transports : ['websocket'] });
+
+            socket.on('message', function(incoming) {   
+                console.log("Recieved message")
+                var incomingMessage = incoming["message"];
+                
+            });
+
+            function sendPacket(){
+                //var messageInput = document.getElementById("message");
+                var packet = {
+                    "message": messageInput.value
+                }
+                socket.emit("message", packet);
+                messageInput.value = "";
+            }
+        </script>
     </head>
     <body>
         <h1>Fake Discord!</h1>
