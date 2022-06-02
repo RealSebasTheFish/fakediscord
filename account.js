@@ -1,0 +1,5 @@
+login = {
+    "email":"",
+    "username":"",
+    "password":""
+}
