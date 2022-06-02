@@ -19,7 +19,15 @@ input {
 }
 
 #textbox {
-
+    width: 900px;
+	background-color: rgb(246,246,246);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+    opacity: 80%;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #voicebox {
