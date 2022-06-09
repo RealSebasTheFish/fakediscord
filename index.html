@@ -15,11 +15,18 @@
             socket.on('message', function(incoming) {   
                 console.log("Recieved message")
                 var incomingMessage = incoming["message"];
-                
+                var div = document.createElement("div");
+                div.style.width = "100px";
+                div.style.height = "100px";
+                div.style.background = "red";
+                div.style.color = "white";
+                div.textContent = incomingMessage;
+
+                document.getElementById("messageDisplay").appendChild(div);
             });
 
-            function sendPacket(){
-                //var messageInput = document.getElementById("message");
+            function sendMessage(){
+                var messageInput = document.getElementById("textBox");
                 var packet = {
                     "message": messageInput.value
                 }
@@ -29,7 +36,26 @@
         </script>
     </head>
     <body>
-        <h1>Fake Discord!</h1>
-        <div id="textbox"></div>
+        <div id="channelList">
+            <div id="logo">
+                <h1>Fake Discord</h1>
+            </div>
+        </div>
+        <div id="messages">
+            <div id="messageDisplay">
+
+            </div>
+            <div id="messageInput">
+                <input id="textBox" placeholder="Enter your message here"/>
+            </div>
+            
+        </div>
     </body>
+    <script>
+        document.getElementById("textBox").addEventListener("keydown", function (e) {
+            if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+                sendMessage();
+            }
+        });
+    </script>
 </html>

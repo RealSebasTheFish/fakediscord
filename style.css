@@ -4,32 +4,52 @@ body {
     font-family: "Catamaran";
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
-#channels {
-    background-color: #2E3036;
+#channelList {
+    background-color: #2E3137;
     position: absolute;
     height: 100%;
     width: 25%;
 }
 
-input {
-    background-color: #212325;
-    font-family: "Whitney", "Catamaran";
+#messages {
+    background-color: #36383E;
+    position: absolute;
+    left: 25%;
+    height: 100%;
+    width: 75%; 
 }
 
-#textbox {
-    width: 900px;
-    height: 1000px;
-    background-color: white;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 50px;
-    opacity: 80%;
-    border-radius: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+#logo {
+    width: 100%;
+    text-align: center;
 }
+
+#messageDisplay {
+    height: 80vh;
+}
+
+#messageInput {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+#textBox {
+    background-color: #41444A;
+    color: #FFFFFF;
+    font-family: "Whitney", "Catamaran";
+    font-size: 18px;
+    border: none;
+    width: 80%;
+    padding: 10px;
+    bottom: 100px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
 
 #voicebox {
     
