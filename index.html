@@ -10,7 +10,7 @@
         <meta name="description" content="a place where you can hang out and talk to friends about whether or not traps are homo or not"/>
         <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
         <script>
-            var socket = io.connect('http://localhost:64758', { transports : ['websocket'] });
+            var socket = io.connect('http://10.6.161.164:64758', { transports : ['websocket'] });
 
             socket.on('message', function(incoming) {   
                 console.log("Recieved message")
