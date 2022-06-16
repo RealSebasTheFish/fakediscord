@@ -10,7 +10,8 @@ function hash(string) {
   }
 
 login = {
-    "email":"email@email.com",
-    "username":"user_name",
-    "password":hash("password")
-}
+    "userID":1,
+    "email":"gabriel@raposo.ca",
+    "username":"gabe_raposo",
+    "password":hash("testpass")
+  }
