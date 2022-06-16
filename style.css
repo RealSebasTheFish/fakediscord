@@ -51,6 +51,49 @@ body {
 }
 
 
-#voicebox {
-    
+.message {
+    width: 100%;
+    padding: 3vh 3vw;
+}
+
+.messageInfo{
+    height: 3.5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.pfp {
+    width: 3.5vw;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pfp img{
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
+.author{
+    display: inline-flex;
+    margin-left: 1vw;
+}
+
+.author p {
+    margin: 0;
+}
+
+.messageContent {
+    margin-top: 2vh;
+}
+
+.messageContent p {
+    margin: 0;
+}
+
+#firstOne
+{
+    display: none;
 }

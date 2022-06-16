@@ -15,12 +15,10 @@
             socket.on('message', function(incoming) {   
                 console.log("Recieved message")
                 var incomingMessage = incoming["message"];
-                var div = document.createElement("div");
-                div.style.width = "100px";
-                div.style.height = "100px";
-                div.style.background = "red";
-                div.style.color = "white";
-                div.textContent = incomingMessage;
+                var div = document.getElementById("firstOne").cloneNode(true);
+                div.id = "";
+
+                div.getElementsByClassName("messageContent")[0].textContent = incomingMessage;
 
                 document.getElementById("messageDisplay").appendChild(div);
             });
@@ -42,8 +40,17 @@
             </div>
         </div>
         <div id="messages">
+            <div id = "firstOne" class="message">
+                <div class="messageInfo">
+                    <div class="pfp"><img src="discordlogo.png"></div>
+                    <div class="author"><p>John Doe</p></div>
+                </div>
+                <div class = "messageContent">
+                    <p>This is a test message, make me look good!</p>
+                </div>
+            </div>
             <div id="messageDisplay">
-
+                
             </div>
             <div id="messageInput">
                 <input id="textBox" placeholder="Enter your message here"/>
